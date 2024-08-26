@@ -70,6 +70,14 @@ main {
 		padding: 15px;
 		border-radius: 15px;
 
+		@media (max-width: 720px), handheld {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 300px;
+		}
+
 		li {
 			margin: 10px;
 			font-weight: 600;
@@ -125,7 +133,7 @@ main {
 		img {
 			border-radius: 10px 10px 0 0;
 			width: 400px;
-			
+
 			@media (max-width: 720px), handheld {
 				width: 300px;
 			}
@@ -138,7 +146,7 @@ main {
 		p {
 			margin: 10px;
 			width: 300px;
-			
+
 			@media (max-width: 720px), handheld {
 				width: 250px;
 			}
