@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+	font-family: 'Manrope', sans-serif;
+	--font-sans-serif: 'Manrope';
+	margin: 0;
+	padding: 0;
+	height: 100dvh;
+	width: 100dvw;
+	font-size: 1dvw;
+	background-color: #f6f6f6;
+	overflow-x: hidden;
+
+	@media (max-width: 720px), handheld {
+		font-size: 4dvw;
+	}
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}
+
+.mainInfo {
+	background-color: #191919;
+	color: white;
+	padding: 25px 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	@media (max-width: 720px), handheld {
+		flex-direction: column;
+		align-items: center;
+		padding: 15px 0;
+		justify-content: baseline;
+	}
+
+	section {
+		width: 35%;
+
+		@media (max-width: 720px), handheld {
+			width: 90%;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 4em;
+		}
+
+		p {
+			color: lightgray;
+			margin: 10px 0;
+			font-size: 1.2em;
+		}
+
+		.jobTitle {
+			font-size: 1.8em;
+			font-weight: bold;
+		}
+	}
+
+	ul {
+		background-color: #303030;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: max-content;
+		width: 125px;
+		padding: 15px;
+		border-radius: 15px;
+
+		li {
+			margin: 10px;
+			font-weight: 600;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+				display: flex;
+				align-items: center;
+				text-align: left;
+
+				@media (max-width: 720px), handheld {
+					font-size: 1.2em;
+				}
+
+				img {
+					margin: 0 10px;
+					width: 20px;
+					height: 20px;
+
+					@media (max-width: 720px), handheld {
+						margin: 0 10px 0 0;
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.projects {
+	margin: 15px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	justify-items: center;
+
+	.projectCard {
+		box-shadow: 0px 15px 15px #c0c0c0;
+		margin: 15px;
+		border-radius: 15px;
+
+		@media (max-width: 720px), handheld {
+			width: 300px;
+		}
+
+		img {
+			border-radius: 10px 10px 0 0;
+			width: 400px;
+			
+			@media (max-width: 720px), handheld {
+				width: 300px;
+			}
+		}
+
+		h2 {
+			margin: 10px;
+		}
+
+		p {
+			margin: 10px;
+			width: 300px;
+			
+			@media (max-width: 720px), handheld {
+				width: 250px;
+			}
+		}
+	}
+}
