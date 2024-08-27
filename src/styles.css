@@ -11,7 +11,7 @@ body {
 	background-color: #f6f6f6;
 	overflow-x: hidden;
 
-	@media (max-width: 720px), handheld {
+	@media (max-width: 768px), handheld {
 		font-size: 4dvw;
 	}
 }
@@ -19,6 +19,16 @@ body {
 main {
 	width: 100%;
 	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .mainInfo {
@@ -29,7 +39,7 @@ main {
 	flex-wrap: wrap;
 	justify-content: space-around;
 
-	@media (max-width: 720px), handheld {
+	@media (max-width: 768px), handheld {
 		flex-direction: column;
 		align-items: center;
 		padding: 15px 0;
@@ -39,7 +49,7 @@ main {
 	section {
 		width: 35%;
 
-		@media (max-width: 720px), handheld {
+		@media (max-width: 768px), handheld {
 			width: 90%;
 		}
 
@@ -66,11 +76,11 @@ main {
 		padding: 0;
 		margin: 0;
 		height: max-content;
-		width: 125px;
+		width: max-content;
 		padding: 15px;
 		border-radius: 15px;
 
-		@media (max-width: 720px), handheld {
+		@media (max-width: 768px), handheld {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -83,13 +93,11 @@ main {
 			font-weight: 600;
 
 			a {
-				text-decoration: none;
-				color: inherit;
 				display: flex;
 				align-items: center;
 				text-align: left;
 
-				@media (max-width: 720px), handheld {
+				@media (max-width: 768px), handheld {
 					font-size: 1.2em;
 				}
 
@@ -98,15 +106,11 @@ main {
 					width: 20px;
 					height: 20px;
 
-					@media (max-width: 720px), handheld {
+					@media (max-width: 768px), handheld {
 						margin: 0 10px 0 0;
 						width: 30px;
 						height: 30px;
 					}
-				}
-
-				&:hover {
-					text-decoration: underline;
 				}
 			}
 		}
@@ -122,32 +126,45 @@ main {
 	justify-items: center;
 
 	.projectCard {
-		box-shadow: 0px 15px 15px #c0c0c0;
+		box-shadow: 0px 0px 15px #c0c0c0;
 		margin: 15px;
 		border-radius: 15px;
 
-		@media (max-width: 720px), handheld {
+		@media (max-width: 768px), handheld {
 			width: 300px;
 		}
 
 		img {
 			border-radius: 10px 10px 0 0;
-			width: 400px;
+			width: 30dvw;
 
-			@media (max-width: 720px), handheld {
-				width: 300px;
+			@media (max-width: 768px), handheld {
+				width: inherit;
 			}
 		}
 
 		h2 {
+			color: #303030;
 			margin: 10px;
+			font-size: 1.2em;
+
+			a {
+				display: flex;
+				align-items: center;
+				img {
+					width: 30px;
+					height: 30px;
+					margin: 0 10px;
+				}
+			}
 		}
 
 		p {
+			color: #303030;
 			margin: 10px;
 			width: 300px;
 
-			@media (max-width: 720px), handheld {
+			@media (max-width: 768px), handheld {
 				width: 250px;
 			}
 		}
